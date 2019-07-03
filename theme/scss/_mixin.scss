@@ -1,0 +1,58 @@
+// 通用Mixin
+// Clear Both
+@mixin clear() {
+    &:after {
+        content: '';
+        display: block;
+        width: 0px;
+        height: 0px;
+        clear: both;
+    }
+}
+
+$defaultLayoutWidth: 1300;
+$defaultLayoutMobileWidth: 320;
+@mixin layoutWidth($width) {
+    width: ($width / $defaultLayoutWidth) * 100%;
+    // width: calc((#{$width} / #{$defaultLayoutWidth}) * 100%);
+}
+
+@mixin layoutCustom($width, $layoutWidth) {
+    width: ($width / $layoutWidth) * 100%;
+}
+
+@mixin layoutWidthMobile($width) {
+    width: ($width / $defaultLayoutMobileWidth) * 100%;
+    // width: calc((#{$width} / #{$defaultLayoutWidth}) * 100%);
+}
+
+@mixin layoutPos($pos, $widthOrHeight, $der) {
+    // top: calc((#{$pos} / #{$widthOrHeight}) * 100%);
+    @if $der=='top' {
+        top: ($pos / $widthOrHeight) * 100%;
+    }
+    @if $der=='left' {
+        left: ($pos / $widthOrHeight) * 100%;
+    }
+    @if $der=='bottom' {
+        bottom: ($pos / $widthOrHeight) * 100%;
+    }
+    @if $der=='right' {
+        right: ($pos / $widthOrHeight) * 100%;
+    }
+}
+
+@mixin showDiff() {
+    .mobile {
+        display: none;
+        @include rwd_down(500) {
+            display: block;
+        }
+    }
+    .desktop {
+        display: block;
+        @include rwd_down(500) {
+            display: none;
+        }
+    }
+}

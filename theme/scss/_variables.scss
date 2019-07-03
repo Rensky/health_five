@@ -1,0 +1,15 @@
+// 基本字型
+$font-size-base: 10;
+
+// RWD Media Queries
+$break-x-small: 320px;
+$break-small:   480px;
+$break-mid:     768px;
+$break-large:   1080px;
+
+$font-family-english: 'Open Sans'; // Google open sans
+$font-family-chinese: 'Microsoft JhengHei'; // 微軟正黑體
+$font-family-notosanstc: 'Noto Sans SC'; //思源黑體
+
+// Grid 設定
+$container-width: 100% !default;

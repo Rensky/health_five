@@ -1,0 +1,39 @@
+// Grid
+// 一般 Grid 欄位數
+@mixin grid($cloum_number,$cloum_gutter){
+
+	// (總長 - 欄位間距 * (欄位數量 - 1)) / 欄位數量
+	width: calc((#{$container-width} - #{$cloum_gutter}px*(#{$cloum_number} - 1)) / #{$cloum_number});
+
+	// 欄位間距
+	margin-right: #{$cloum_gutter}px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+
+	// 最右邊 消除欄位間距
+	&:nth-child(#{$cloum_number}n){
+		margin-right: 0px;
+	}
+}
+
+// 正方形 gird格數
+@mixin grid_box($cloum_number,$cloum_gutter){
+
+	// (總長 - 欄位間距 * (欄位數量 - 1)) / 欄位數量
+	width: calc((#{$container-width} - #{$cloum_gutter}px*(#{$cloum_number} - 1)) / #{$cloum_number});
+	height: calc((#{100vw} - #{$cloum_gutter}px*(#{$cloum_number} - 1)) / #{$cloum_number});
+
+	// 欄位間距
+	margin-right: #{$cloum_gutter}px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+
+	// 最右邊 消除欄位間距
+	&:nth-child(#{$cloum_number}n){
+		margin-right: 0px;
+	}
+}

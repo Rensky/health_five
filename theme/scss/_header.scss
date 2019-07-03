@@ -1,0 +1,318 @@
+// @import "media";
+// .header {
+//     position: relative;
+//     background-color: white;
+//     padding: 5px 5px 0 5px;
+//     @include rwd_down(768) {
+//         padding: 7px 7px 0 7px;
+//     }
+//     @include rwd_down(550) {
+//         padding: 5px 5px 0 5px;
+//     }
+//     .header-container {
+//         display: block;
+//         background-color: #008fc7;
+//         height: 60px;
+//         width: 100%;
+//         // padding: 0.5% 0.5% 0 0.5%;
+//         box-sizing: border-box;
+//     }
+//     .logo {
+//         background: url(../images/default/logo1.png) no-repeat 15px 3px;
+//         background-size: 200px;
+//         width: 240px;
+//         height: 34px;
+//         display: block;
+//         float: left;
+//         margin: 0;
+//         padding: 0;
+//         font-size: 22px;
+//         line-height: 1;
+//         margin-top: 8px;
+//         &:after {
+//             content: ".";
+//             display: block;
+//             clear: both;
+//             visibility: hidden;
+//             line-height: 0;
+//             height: 0;
+//         }
+//         // @include rwd_down(768) {
+//         //     margin-top: 8px;
+//         // }
+//         // @include rwd_down(550) {
+//         //     margin-top: 0px;
+//         // }
+//     }
+// }
+// // @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+// //     .header {
+// //         background-color: #008fc7;
+// //         height: 50px;
+// //         width: 99%;
+// //         margin: 0.5% 0.5% 0 0.5%;
+// //         box-sizing: padding-box;
+// //     }
+// // }
+// /*iPad in portrait & landscape*/
+// .tel-url {
+//     display: block;
+//     float: right;
+//     // height: 50px;
+//     margin-top: 10px;
+//     margin-right: 15px;
+//     color: #fff;
+//     font-size: 13px;
+//     font-weight: 400;
+//     padding: 15px;
+//     padding-top: 20px;
+//     @include rwd_down(768) {
+//         display: none;
+//     }
+// }
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.logo {
+    width: 240px;
+    height: 50px;
+    float: left;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.fb_btn {
+    float: right;
+    display: inline-block;
+}
+
+header {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 777;
+}
+
+header>div {
+    padding: 5px 10px 0;
+}
+
+nav {
+    float: right;
+    line-height: 2.5;
+}
+
+nav ul li {
+    color: #898989;
+    cursor: pointer;
+    display: inline-block;
+    padding-right: 40px;
+    position: relative;
+    font-size: 18px;
+}
+
+nav span {
+    display: inline-block;
+}
+
+nav svg {
+    vertical-align: middle;
+    margin-top: -3px;
+}
+
+nav ul li a {
+    color: #898989;
+}
+
+nav ul li:hover span {
+    color: #0056b3;
+}
+
+nav ul li:hover g {
+    fill: #189343;
+}
+
+nav ul li:hover,
+.logo:hover img {
+    transform: scale(1.01);
+}
+
+.es_submenu {
+    position: absolute;
+    background: #fff;
+    padding: 20px;
+    width: 150px;
+    display: none;
+    -webkit-animation: fadeInDown 0.3s;
+    animation: fadeInDown 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+nav ul li:hover .es_submenu {
+    display: block;
+}
+
+.es_submenu a:hover,
+a.page-scroll.active {
+    color: #189343;
+}
+
+.menuopen {
+    display: none;
+    float: right;
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+
+.menuopen div {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.mline1 {
+    width: 25px;
+    height: 2px;
+    background: #9B9B9B;
+    position: absolute;
+    top: 12px;
+}
+
+.mline2 {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #9B9B9B;
+    position: absolute;
+    top: 21px;
+}
+
+.mline3 {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #9B9B9B;
+    position: absolute;
+    top: 30px;
+}
+
+.mline4 {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background: #9B9B9B;
+    position: absolute;
+    top: 21px;
+    -webkit-transform: rotate(45deg) scaleX(0);
+    -ms-transform: rotate(45deg) scaleX(0);
+    transform: rotate(45deg) scaleX(0);
+}
+
+.clickopen span.mline1,
+.clickopen span.mline3 {
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+}
+
+.clickopen span.mline2 {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.clickopen span.mline4 {
+    -webkit-transform: rotate(45deg) scaleX(1);
+    -ms-transform: rotate(45deg) scaleX(1);
+    transform: rotate(45deg) scaleX(1);
+}
+
+li.no_show {
+    display: none;
+}
+
+nav g,
+nav span,
+nav ul li,
+.logo img,
+nav,
+.clickopen>span {
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+@include rwd_down(768) {
+    nav ul li>svg,
+    .menuopen {
+        display: inline-block;
+    }
+    // .desktop-menu {
+    //     display: none;
+    // }
+    nav span {
+        font-size: 16px;
+    }
+    nav ul li {
+        padding-right: 5px;
+    }
+    .logo {
+        width: 200px;
+        height: auto;
+    }
+    nav {
+        line-height: 2.1
+    }
+    header>div {
+        padding: 5px 10px;
+    }
+    nav {
+        width: 80%;
+        height: 100%;
+        background: #fff;
+        padding-top: 10px;
+        top: -10px;
+        right: -90%;
+        bottom: 0;
+        position: fixed;
+        opacity: 0;
+    }
+    nav.show {
+        right: 0;
+        opacity: 1;
+        background-color: #eeeeee;
+    }
+    nav ul {
+        padding: 30px;
+    }
+    nav ul li {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+    .es_submenu {
+        position: relative;
+        display: block;
+    }
+    nav ul li>svg,
+    .menuopen {
+        display: inline-block;
+    }
+}

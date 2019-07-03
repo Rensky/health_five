@@ -1,0 +1,46 @@
+// 字型
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+//@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css); //思源黑體
+
+
+// 基本字體設定為 10px, 基本英文字型 sans-serif 中文 微軟正黑體
+html,body{
+	font-size: $font-size-base + px;
+	font-family: $font-family-english, $font-family-chinese;
+}
+
+// 輸出為 rem
+@mixin font-size($size){
+	font-size: ($size/$font-size-base) + rem;
+}
+
+// $responsive  - 一個字基本為多少vw
+// $min         - 字體最小設限 (px)
+// $max         - 字體最大設限 (px)
+// $fallback    - 假如瀏覽器不支援的話設定字體的大小(px)
+// 用法         - @include(基本大小(vw),字體最小設限(px),字體最大設限(px),不支援vw情況下字體大小(px 選用))
+//                @include(3px,20px,30px,30px)
+
+@mixin r-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}

@@ -1,0 +1,108 @@
+.notice-area {
+    box-sizing: border-box;
+    padding: 35px 10px 5px 10px;
+    background-color: #dbdcdc;
+    .notice-container {
+        text-align: justify;
+        font-size: 16px;
+        color: #888888;
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 0px 10px;
+        ul {
+            list-style: decimal;
+            li {
+                line-height: 26px;
+                margin-left: 20px;
+                margin-bottom: 10px;
+                font-weight: 300;
+                .sp-txt {
+                    color: #f35f67;
+                }
+                a {
+                    color: #888888;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            padding-bottom: 30px;
+        }
+        .other-notice {
+            padding-top: 10px;
+            line-height: 26px;
+            font-size: 16px;
+            padding-bottom: 30px;
+        }
+        .notice-title {
+            width: 130px;
+            position: relative;
+            text-align: center;
+            font-size: 18px;
+            margin: 0 auto 30px auto;
+        }
+        .icon-arrow-down,
+        .icon-arrow-up {
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            width: 15px;
+            height: 10px;
+            background-image: url(../images/default/triangle.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            // @include rwd_down(768){
+            //     right: 
+            // }
+        }
+        .icon-arrow-up {
+            transform: rotateX(180deg);
+        }
+    }
+}
+
+.card-notice {
+    background-color: #ececec;
+    color: #999999;
+    .wrap-content {
+        max-width: 960px;
+        padding: 25px 20px;
+        margin: 0 auto;
+        text-align: center;
+        clear: both;
+        .big-title {
+            display: table-cell;
+            width: 45%;
+            font-size: 35px;
+            letter-spacing: 5px;
+            vertical-align: middle;
+            @include rwd_down(840) {
+                display: block;
+                margin: 0px auto 20px auto;
+                width: 100%;
+            }
+            @include rwd_down(400) {
+                font-size: 25px;
+            }
+        }
+        .descript {
+            text-align: left;
+            width: 55%;
+            font-size: 16px;
+            line-height: 1.8;
+            display: table-cell;
+            vertical-align: top;
+            text-align: justify;
+            a {
+                color: #999999;
+            }
+            @include rwd_down(400) {
+                font-size: 15px;
+            }
+        }
+        .clear {
+            clear: both;
+        }
+    }
+}

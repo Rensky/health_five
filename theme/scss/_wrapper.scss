@@ -1,0 +1,13 @@
+.wrapper {
+    margin: 5px 5px 0px 5px;
+    @include rwd_down(768) {
+        margin: 7px 7px 0px 7px;
+        width: calc(100vw - 14px);
+    }
+    @include rwd_down(550) {
+        margin: 5px 5px 0px 5px;
+        width: calc(100vw - 10px);
+    }
+    width: calc(100vw - 10px);
+    overflow: hidden;
+}

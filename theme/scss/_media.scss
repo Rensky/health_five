@@ -1,0 +1,71 @@
+
+// RWD Media Queries
+
+// 固定裝置設定
+// xs = 320 以下(較小狀態)
+// sm = 321 ~ 480 之間(手機直向)
+// md = 481 ~ 767 之間(手機橫向)
+// lg = 768 ~ 1080 之間(Pad 大小)
+
+@mixin rwd($media){
+	@if $media == xs {
+		@media only screen and (max-width: $break-x-small) {
+			@content;
+		}
+	}
+	@else if $media == sm {
+		@media only screen and (min-width: $break-x-small + 1) and (max-width: $break-small) {
+			@content;
+		}
+	}
+	@else if $media == md {
+		@media only screen and (min-width: $break-small + 1) and (max-width: $break-mid - 1) {
+			@content;
+		}
+	}
+	@else if $media == lg {
+		@media only screen and (min-width: $break-mid) and (max-width: $break-large) {
+			@content;
+		}
+	}
+	@else if $media == lgmax {
+		@media only screen and (min-width: $break-large) {
+			@content;
+		}
+	}
+}
+
+// 自訂解析度 以下解析度
+@mixin rwd_down($media){
+	@media only screen and (max-width: $media + 'px') {
+		@content;
+	}
+}
+
+// 自訂解析度 以上解析度
+@mixin rwd_up($media){
+	@media only screen and (min-width: $media + 'px') {
+		@content;
+	}
+}
+
+// 自訂解析度區間解析度 rwd(768,1080)
+@mixin rwd_range($min,$max){
+	@media only screen and (min-width: $min + 'px') and (max-width: $max + 'px') {
+		@content;
+	}
+}
+
+// 自訂高度 以下解析度
+@mixin rwd_height_down($media){
+	@media only screen and (max-height: $media + 'px') {
+		@content;
+	}
+}
+
+// 自訂高度 以上解析度
+@mixin rwd_height_up($media){
+	@media only screen and (min-height: $media + 'px') {
+		@content;
+	}
+}
