@@ -3,7 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
 html,
 body,
 div,
@@ -128,9 +128,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-html, body {
+html,
+body {
   font-size: 10px;
-  font-family: "Open Sans", "Microsoft JhengHei"; }
+  font-family: "Noto Sans TC", "Open Sans"; }
 
 /****************\
 * IMG
@@ -155,9 +156,10 @@ html, body {
     transform: translate3d(0, 0, 0); } }
 
 .logo {
-  width: 240px;
+  width: 300px;
   height: 50px;
-  float: left; }
+  float: left;
+  margin-top: 5px; }
 
 .logo img {
   width: 100%; }
@@ -171,7 +173,10 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 777; }
+  min-height: 70px;
+  z-index: 777;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1); }
 
 header > div {
   padding: 5px 10px 0; }
@@ -199,7 +204,7 @@ nav ul li a {
   color: #898989; }
 
 nav ul li:hover span {
-  color: #0056b3; }
+  color: #0097E0; }
 
 nav ul li:hover g {
   fill: #189343; }
@@ -242,6 +247,9 @@ a.page-scroll.active {
   height: 25px;
   margin-top: 2px;
   cursor: pointer; }
+
+.desktop-menu {
+  margin-top: 8px; }
 
 .mline1 {
   width: 25px;
@@ -306,7 +314,7 @@ nav,
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 900px) {
   nav ul li > svg,
   .menuopen {
     display: inline-block; }
@@ -315,8 +323,9 @@ nav,
   nav ul li {
     padding-right: 5px; }
   .logo {
-    width: 200px;
-    height: auto; }
+    width: 240px;
+    height: auto;
+    margin-top: 10px; }
   nav {
     line-height: 2.1; }
   header > div {
@@ -345,7 +354,8 @@ nav,
     display: block; }
   nav ul li > svg,
   .menuopen {
-    display: inline-block; } }
+    display: inline-block;
+    margin-top: 10px; } }
 
 .ft {
   max-width: 1920px;
@@ -626,3 +636,530 @@ nav,
 \**************/
 img {
   width: 100%; }
+
+.section .container {
+  position: relative;
+  max-width: 920px;
+  padding: 60px 20px;
+  margin: 0 auto; }
+
+.section-title {
+  color: #002169;
+  font-size: 42px;
+  line-height: 50px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  text-align: center; }
+  @media only screen and (max-width: 900px) {
+    .section-title {
+      font-size: 38px;
+      line-height: 46px; } }
+
+.section-sub-title {
+  color: #0097e0;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center; }
+  @media only screen and (max-width: 900px) {
+    .section-sub-title {
+      font-size: 18px;
+      line-height: 26px; } }
+
+.five-corner-area {
+  position: relative; }
+  .five-corner-area .color {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+.link-btn {
+  position: relative;
+  display: block;
+  background-color: #fa8c00;
+  min-width: 180px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px 0;
+  text-decoration: none;
+  -webkit-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; }
+  .link-btn:hover {
+    background-color: #176ABD; }
+  @media only screen and (max-width: 900px) {
+    .link-btn {
+      font-size: 16px; } }
+  .link-btn .icon-arrow {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; }
+
+/**************\
+* fixed icon
+\**************/
+.fixed-icon-area {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  z-index: 100; }
+  .fixed-icon-area a {
+    display: block; }
+  .fixed-icon-area .icon-fb {
+    margin-bottom: 20px; }
+
+/**************\
+* Banner 區塊
+\**************/
+.section-banner {
+  padding-top: 70px; }
+  .section-banner .container {
+    max-width: 1440px;
+    padding: 0px 0px; }
+  .section-banner .kv-bg .mobile {
+    display: none; }
+    @media only screen and (max-width: 500px) {
+      .section-banner .kv-bg .mobile {
+        display: block; } }
+  .section-banner .kv-bg .desktop {
+    display: block; }
+    @media only screen and (max-width: 500px) {
+      .section-banner .kv-bg .desktop {
+        display: none; } }
+  .section-banner .title {
+    position: absolute;
+    width: 34.72222%;
+    left: 32.63889%;
+    top: 22.38806%; }
+    @media only screen and (max-width: 500px) {
+      .section-banner .title {
+        width: 87.5%;
+        left: 6.25%;
+        top: 32.83582%; } }
+
+/**************\
+* kv dsc
+\**************/
+.section-kv-dsc {
+  background-image: url(../images/bg_2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  .section-kv-dsc .container {
+    color: #fff;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    text-align: center; }
+  .section-kv-dsc .title {
+    font-size: 42px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    line-height: 50px; }
+    @media only screen and (max-width: 900px) {
+      .section-kv-dsc .title {
+        font-size: 38px;
+        line-height: 46px; } }
+  .section-kv-dsc .dsc {
+    font-size: 22px;
+    line-height: 30px; }
+    @media only screen and (max-width: 900px) {
+      .section-kv-dsc .dsc {
+        font-size: 18px;
+        line-height: 26px; } }
+
+/**************\
+* 大人這樣想
+\**************/
+.section-people-care {
+  background-color: #e5f5fc; }
+  .section-people-care .section-sub-title {
+    padding-bottom: 30px; }
+  .section-people-care .block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media only screen and (max-width: 500px) {
+      .section-people-care .block {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .section-people-care .block .img-area {
+      width: 220px;
+      max-width: 220px;
+      min-width: 220px; }
+    .section-people-care .block .dsc {
+      width: 100%;
+      font-size: 20px;
+      line-height: 38px;
+      color: #1a1a1a;
+      margin-left: 25px; }
+      @media only screen and (max-width: 500px) {
+        .section-people-care .block .dsc {
+          margin-left: 0px;
+          font-size: 16px;
+          line-height: 34px;
+          margin-top: 20px; } }
+      .section-people-care .block .dsc .sp-txt {
+        font-size: 30px;
+        color: #0097e0;
+        line-height: 38px;
+        font-weight: bold;
+        margin: 0 5px; }
+        @media only screen and (max-width: 500px) {
+          .section-people-care .block .dsc .sp-txt {
+            margin-left: 0px;
+            font-size: 34px;
+            line-height: 26px; } }
+  @media only screen and (max-width: 500px) {
+    .section-people-care .block-reverse {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; } }
+  .section-people-care .block-reverse .dsc {
+    margin-left: 0px;
+    margin-right: 25px; }
+    @media only screen and (max-width: 500px) {
+      .section-people-care .block-reverse .dsc {
+        margin-right: 0px; } }
+  .section-people-care .bottom-title-area {
+    position: relative;
+    margin: 0 auto;
+    max-width: 440px; }
+    .section-people-care .bottom-title-area .bottom-title {
+      margin: 0 auto;
+      width: 63.63636%; }
+    .section-people-care .bottom-title-area .hand {
+      position: absolute;
+      top: 0;
+      width: 15.90909%; }
+    .section-people-care .bottom-title-area .hand-right {
+      right: 0; }
+    .section-people-care .bottom-title-area .hand-left {
+      left: 0; }
+
+/**************\
+* 斜槓熟齡代表團
+\**************/
+.section-example-people {
+  position: relative; }
+  @media only screen and (max-width: 900px) {
+    .section-example-people .container {
+      padding-bottom: 0px; } }
+  .section-example-people .section-sub-title {
+    padding-bottom: 30px; }
+  .section-example-people .bg-line {
+    position: absolute;
+    width: 100%; }
+    @media only screen and (max-width: 500px) {
+      .section-example-people .bg-line {
+        display: none; } }
+  .section-example-people .line-top {
+    top: 0;
+    left: 0; }
+  .section-example-people .line-bottom {
+    bottom: 0;
+    left: 0; }
+  .section-example-people .block {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin-bottom: 50px; }
+    .section-example-people .block .block-img {
+      width: 83.33333%; }
+      .section-example-people .block .block-img .mobile {
+        display: none; }
+        @media only screen and (max-width: 500px) {
+          .section-example-people .block .block-img .mobile {
+            display: block; } }
+      .section-example-people .block .block-img .desktop {
+        display: block; }
+        @media only screen and (max-width: 500px) {
+          .section-example-people .block .block-img .desktop {
+            display: none; } }
+      @media only screen and (max-width: 900px) {
+        .section-example-people .block .block-img {
+          position: relative;
+          width: 100%;
+          z-index: 1;
+          padding-bottom: 20px; } }
+    .section-example-people .block .block-img-right {
+      float: right; }
+      .section-example-people .block .block-img-right:after {
+        content: '';
+        display: block;
+        width: 0px;
+        height: 0px;
+        clear: both; }
+    .section-example-people .block:after {
+      content: '';
+      display: block;
+      width: 0px;
+      height: 0px;
+      clear: both; }
+  .section-example-people .block-dsc-area {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 42.70833%;
+    top: 15%; }
+    @media only screen and (max-width: 900px) {
+      .section-example-people .block-dsc-area {
+        position: relative;
+        width: 100%;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 0px;
+        background-color: initial; } }
+    .section-example-people .block-dsc-area .block-title {
+      font-size: 25px;
+      color: #0097e0;
+      line-height: 30px;
+      font-weight: bold;
+      vertical-align: center;
+      padding-bottom: 20px; }
+      @media only screen and (max-width: 900px) {
+        .section-example-people .block-dsc-area .block-title {
+          text-align: center;
+          font-size: 21px; } }
+      .section-example-people .block-dsc-area .block-title .name {
+        font-size: 20px;
+        color: #1a1a1a;
+        margin-left: 10px; }
+        @media only screen and (max-width: 900px) {
+          .section-example-people .block-dsc-area .block-title .name {
+            font-size: 18px; } }
+    .section-example-people .block-dsc-area .block-left {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px;
+      width: 53.65854%; }
+      @media only screen and (max-width: 900px) {
+        .section-example-people .block-dsc-area .block-left {
+          display: block;
+          width: 100%;
+          max-width: 68.75%;
+          margin: 0 auto; } }
+    .section-example-people .block-dsc-area .block-right {
+      display: inline-block;
+      width: 41.46341%; }
+      @media only screen and (max-width: 900px) {
+        .section-example-people .block-dsc-area .block-right {
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          padding-top: 20px; } }
+      .section-example-people .block-dsc-area .block-right .block-txt {
+        font-size: 18px;
+        line-height: 28px; }
+        .section-example-people .block-dsc-area .block-right .block-txt .sp-txt {
+          color: #0097e0; }
+  @media only screen and (max-width: 900px) {
+    .section-example-people .desktop-btn {
+      display: none; } }
+  .section-example-people .mobile-btn {
+    display: none; }
+    @media only screen and (max-width: 900px) {
+      .section-example-people .mobile-btn {
+        display: block;
+        margin: 20px auto 0px auto; } }
+  .section-example-people .block-1 .block-dsc-area {
+    right: 0; }
+  .section-example-people .block-2 .block-dsc-area {
+    left: 0; }
+  .section-example-people .block-3 .block-dsc-area {
+    right: 0; }
+  .section-example-people .block-4 .block-dsc-area {
+    left: 0; }
+  .section-example-people .link-btn {
+    max-width: 180px; }
+
+/**************\
+* 老師建議
+\**************/
+.section-teacher {
+  background-color: #e5f5fc; }
+  @media only screen and (max-width: 650px) {
+    .section-teacher .section-title {
+      padding-bottom: 20px; } }
+  .section-teacher .content .title {
+    color: #0097e0;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    padding-bottom: 20px; }
+    @media only screen and (max-width: 900px) {
+      .section-teacher .content .title {
+        font-size: 18px;
+        line-height: 26px; } }
+    @media only screen and (max-width: 650px) {
+      .section-teacher .content .title {
+        text-align: center; } }
+  @media only screen and (max-width: 650px) {
+    .section-teacher .content .desktop-title {
+      display: none; } }
+  .section-teacher .content .mobile-title {
+    display: none; }
+    @media only screen and (max-width: 650px) {
+      .section-teacher .content .mobile-title {
+        display: block; } }
+  @media only screen and (max-width: 650px) {
+    .section-teacher .content .desktop-btn {
+      display: none; } }
+  .section-teacher .content .mobile-btn {
+    display: none; }
+    @media only screen and (max-width: 650px) {
+      .section-teacher .content .mobile-btn {
+        display: block;
+        max-width: 180px;
+        margin: 0 auto;
+        padding-top: 10px; } }
+  .section-teacher .img-area {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%; }
+    .section-teacher .img-area .name {
+      display: block;
+      font-size: 22px;
+      color: #1a1a1a;
+      font-weight: bold;
+      text-align: center;
+      padding-top: 20px; }
+    @media only screen and (max-width: 650px) {
+      .section-teacher .img-area {
+        display: block;
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+        padding-bottom: 20px; } }
+  .section-teacher .dsc-area {
+    display: inline-block;
+    width: 71.875%;
+    margin-left: 10px; }
+    @media only screen and (max-width: 650px) {
+      .section-teacher .dsc-area {
+        display: block;
+        width: 100%;
+        margin: 0 auto; } }
+    .section-teacher .dsc-area .dsc-left {
+      display: inline-block;
+      vertical-align: top;
+      width: 63.76812%; }
+      @media only screen and (max-width: 650px) {
+        .section-teacher .dsc-area .dsc-left {
+          display: block;
+          width: 100%;
+          margin: 0 auto; } }
+      .section-teacher .dsc-area .dsc-left p {
+        color: #1a1a1a;
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 30px; }
+        @media only screen and (max-width: 650px) {
+          .section-teacher .dsc-area .dsc-left p {
+            font-size: 16px;
+            line-height: 26px;
+            padding-bottom: 20px; } }
+    .section-teacher .dsc-area .dsc-right {
+      display: inline-block;
+      width: 31.88406%; }
+      @media only screen and (max-width: 650px) {
+        .section-teacher .dsc-area .dsc-right {
+          display: block;
+          width: 100%;
+          max-width: 220px;
+          margin: 0 auto; } }
+    .section-teacher .dsc-area .link-btn {
+      max-width: 180px; }
+
+/**************\
+* 最後
+\**************/
+@media only screen and (max-width: 650px) {
+  .section-bottom .container {
+    padding-top: 10px; } }
+
+.section-bottom .product-area .mobile {
+  display: none; }
+  @media only screen and (max-width: 500px) {
+    .section-bottom .product-area .mobile {
+      display: block; } }
+
+.section-bottom .product-area .desktop {
+  display: block; }
+  @media only screen and (max-width: 500px) {
+    .section-bottom .product-area .desktop {
+      display: none; } }
+
+.section-bottom .btn-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 60px 0px; }
+  .section-bottom .btn-area a {
+    display: block;
+    width: 50%; }
+  .section-bottom .btn-area .first-btn {
+    margin-right: 40px; }
+  @media only screen and (max-width: 650px) {
+    .section-bottom .btn-area {
+      display: block;
+      padding: 30px 0px 40px 0px; }
+      .section-bottom .btn-area a {
+        max-width: 200px;
+        margin: 0 auto;
+        margin-bottom: 30px; }
+      .section-bottom .btn-area .first-btn {
+        margin-right: auto; } }
+
+.section-bottom .title {
+  max-width: 540px;
+  margin: 0 auto; }
+
+.section-bottom .other-dsc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 55px 0px 50px 0px; }
+  .section-bottom .other-dsc .left {
+    width: 55%;
+    margin-right: 30px; }
+  .section-bottom .other-dsc .right {
+    width: 55%; }
+  @media only screen and (max-width: 650px) {
+    .section-bottom .other-dsc {
+      display: block; }
+      .section-bottom .other-dsc .left {
+        width: 100%;
+        margin-right: 0px; }
+      .section-bottom .other-dsc .right {
+        width: 100%; } }
+
+.section-bottom .fb-btn-area {
+  padding: 0px;
+  width: 220px;
+  margin: 0 auto; }
+  .section-bottom .fb-btn-area .link-btn {
+    background-color: #1976d2;
+    -webkit-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease;
+    min-width: 220px; }
+    .section-bottom .fb-btn-area .link-btn:hover {
+      background-color: #176ABD; }

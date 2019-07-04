@@ -16,6 +16,8 @@
 \**************/
 
 $bg-color: #fff;
+$desktop-font-size-p: 18px;
+$mobile-font-size-p: 16px;
 
 /**************\
 * 動畫
@@ -40,4 +42,590 @@ $bg-color: #fff;
 
 img {
     width: 100%;
+}
+
+.section {
+    .container {
+        position: relative;
+        max-width: 920px;
+        padding: 60px 20px;
+        margin: 0 auto;
+    }
+}
+
+.section-title {
+    color: #002169;
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: center;
+    @include rwd_down(900) {
+        font-size: 38px;
+        line-height: 46px;
+    }
+}
+
+.section-sub-title {
+    color: #0097e0;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    @include rwd_down(900) {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+.five-corner-area {
+    position: relative;
+    .color {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.link-btn {
+    position: relative;
+    display: block;
+    background-color: #fa8c00;
+    min-width: 180px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px 0;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    &:hover {
+        background-color: #176ABD;
+    }
+    @include rwd_down(900) {
+        font-size: 16px;
+    }
+    .icon-arrow {
+        display: inline-block;
+        vertical-align: top;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+}
+
+
+/**************\
+* fixed icon
+\**************/
+
+.fixed-icon-area {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    z-index: 100;
+    a {
+        display: block;
+    }
+    .icon-fb {
+        margin-bottom: 20px;
+    }
+}
+
+
+/**************\
+* Banner 區塊
+\**************/
+
+.section-banner {
+    padding-top: 70px;
+    .container {
+        max-width: 1440px;
+        padding: 0px 0px;
+    }
+    .kv-bg {
+        @include showDiff();
+    }
+    .title {
+        position: absolute;
+        @include layoutCustom(500, 1440);
+        @include layoutPos(470, 1440, 'left');
+        @include layoutPos(150, 670, 'top');
+        @include rwd_down(500) {
+            @include layoutCustom(280, 320);
+            @include layoutPos(20, 320, 'left');
+            @include layoutPos(220, 670, 'top');
+        }
+    }
+}
+
+
+/**************\
+* kv dsc
+\**************/
+
+.section-kv-dsc {
+    background-image: url(../images/bg_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .container {
+        color: #fff;
+        padding-top: 55px;
+        padding-bottom: 55px;
+        text-align: center;
+    }
+    .title {
+        font-size: 42px;
+        font-weight: bold;
+        padding-bottom: 20px;
+        line-height: 50px;
+        @include rwd_down(900) {
+            font-size: 38px;
+            line-height: 46px;
+        }
+    }
+    .dsc {
+        font-size: 22px;
+        line-height: 30px;
+        @include rwd_down(900) {
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}
+
+
+/**************\
+* 大人這樣想
+\**************/
+
+.section-people-care {
+    background-color: #e5f5fc;
+    .section-sub-title {
+        padding-bottom: 30px;
+    }
+    .block {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        @include rwd_down(500) {
+            flex-direction: column;
+        }
+        .img-area {
+            width: 220px;
+            max-width: 220px;
+            min-width: 220px;
+        }
+        .dsc {
+            width: 100%;
+            font-size: 20px;
+            line-height: 38px;
+            color: #1a1a1a;
+            margin-left: 25px;
+            @include rwd_down(500) {
+                margin-left: 0px;
+                font-size: 16px;
+                line-height: 34px;
+                margin-top: 20px;
+            }
+            .sp-txt {
+                font-size: 30px;
+                color: #0097e0;
+                line-height: 38px;
+                font-weight: bold;
+                margin: 0 5px;
+                @include rwd_down(500) {
+                    margin-left: 0px;
+                    font-size: 34px;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+    .block-reverse {
+        @include rwd_down(500) {
+            flex-direction: column-reverse;
+        }
+        .dsc {
+            margin-left: 0px;
+            margin-right: 25px;
+            @include rwd_down(500) {
+                margin-right: 0px;
+            }
+        }
+    }
+    .bottom-title-area {
+        position: relative;
+        margin: 0 auto;
+        max-width: 440px;
+        .bottom-title {
+            margin: 0 auto;
+            @include layoutCustom(280, 440);
+        }
+        .hand {
+            position: absolute;
+            top: 0;
+            @include layoutCustom(70, 440);
+        }
+        .hand-right {
+            right: 0;
+        }
+        .hand-left {
+            left: 0;
+        }
+    }
+}
+
+
+/**************\
+* 斜槓熟齡代表團
+\**************/
+
+.section-example-people {
+    position: relative;
+    @include rwd_down(900) {
+        .container {
+            padding-bottom: 0px;
+        }
+    }
+    .section-sub-title {
+        padding-bottom: 30px;
+    }
+    .bg-line {
+        position: absolute;
+        width: 100%;
+        @include rwd_down(500) {
+            display: none;
+        }
+    }
+    .line-top {
+        top: 0;
+        left: 0;
+    }
+    .line-bottom {
+        bottom: 0;
+        left: 0;
+    }
+    .block {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        margin-bottom: 50px;
+        .block-img {
+            @include showDiff();
+            @include layoutCustom(800, 960);
+            @include rwd_down(900) {
+                position: relative;
+                width: 100%;
+                z-index: 1;
+                padding-bottom: 20px;
+            }
+        }
+        .block-img-right {
+            float: right;
+            @include clear();
+        }
+        @include clear();
+    }
+    .block-dsc-area {
+        position: absolute;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        @include layoutCustom(410, 960);
+        @include layoutPos(75, 500, 'top');
+        @include rwd_down(900) {
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+            padding: 0px;
+            background-color: initial;
+        }
+        .block-title {
+            font-size: 25px;
+            color: #0097e0;
+            line-height: 30px;
+            font-weight: bold;
+            vertical-align: center;
+            padding-bottom: 20px;
+            @include rwd_down(900) {
+                text-align: center;
+                font-size: 21px;
+            }
+            .name {
+                font-size: 20px;
+                color: #1a1a1a;
+                margin-left: 10px;
+                @include rwd_down(900) {
+                    font-size: 18px;
+                }
+            }
+        }
+        .block-left {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 10px;
+            @include layoutCustom(220, 410);
+            @include rwd_down(900) {
+                display: block;
+                width: 100%;
+                max-width: 68.75%;
+                margin: 0 auto;
+            }
+        }
+        .block-right {
+            display: inline-block;
+            @include layoutCustom(170, 410);
+            @include rwd_down(900) {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 20px;
+            }
+            .block-txt {
+                font-size: $desktop-font-size-p;
+                line-height: 28px;
+                .sp-txt {
+                    color: #0097e0;
+                }
+            }
+        }
+    }
+    .desktop-btn {
+        @include rwd_down(900) {
+            display: none;
+        }
+    }
+    .mobile-btn {
+        display: none;
+        @include rwd_down(900) {
+            display: block;
+            margin: 20px auto 0px auto;
+        }
+    }
+    .block-1 {
+        .block-dsc-area {
+            right: 0;
+        }
+    }
+    .block-2 {
+        .block-dsc-area {
+            left: 0;
+        }
+    }
+    .block-3 {
+        .block-dsc-area {
+            right: 0;
+        }
+    }
+    .block-4 {
+        .block-dsc-area {
+            left: 0;
+        }
+    }
+    .link-btn {
+        max-width: 180px;
+    }
+}
+
+
+/**************\
+* 老師建議
+\**************/
+
+.section-teacher {
+    background-color: #e5f5fc;
+    .section-title {
+        @include rwd_down(650) {
+            padding-bottom: 20px;
+        }
+    }
+    .content {
+        .title {
+            color: #0097e0;
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: bold;
+            padding-bottom: 20px;
+            @include rwd_down(900) {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            @include rwd_down(650) {
+                text-align: center;
+            }
+        }
+        .desktop-title {
+            @include rwd_down(650) {
+                display: none;
+            }
+        }
+        .mobile-title {
+            display: none;
+            @include rwd_down(650) {
+                display: block;
+            }
+        }
+        .desktop-btn {
+            @include rwd_down(650) {
+                display: none;
+            }
+        }
+        .mobile-btn {
+            display: none;
+            @include rwd_down(650) {
+                display: block;
+                max-width: 180px;
+                margin: 0 auto;
+                padding-top: 10px;
+            }
+        }
+    }
+    .img-area {
+        display: inline-block;
+        vertical-align: top;
+        @include layoutCustom(240, 960);
+        .name {
+            display: block;
+            font-size: 22px;
+            color: #1a1a1a;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 20px
+        }
+        @include rwd_down(650) {
+            display: block;
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+        }
+    }
+    .dsc-area {
+        display: inline-block;
+        @include layoutCustom(690, 960);
+        margin-left: 10px;
+        @include rwd_down(650) {
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .dsc-left {
+            display: inline-block;
+            vertical-align: top;
+            @include layoutCustom(440, 690);
+            @include rwd_down(650) {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+            }
+            p {
+                color: #1a1a1a;
+                font-size: 18px;
+                line-height: 28px;
+                padding-bottom: 30px;
+                @include rwd_down(650) {
+                    font-size: 16px;
+                    line-height: 26px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .dsc-right {
+            display: inline-block;
+            @include layoutCustom(220, 690);
+            @include rwd_down(650) {
+                display: block;
+                width: 100%;
+                max-width: 220px;
+                margin: 0 auto;
+            }
+        }
+        .link-btn {
+            max-width: 180px;
+        }
+    }
+}
+
+
+/**************\
+* 最後
+\**************/
+
+.section-bottom {
+    @include rwd_down(650) {
+        .container {
+            padding-top: 10px;
+        }
+    }
+    .product-area {
+        @include showDiff();
+    }
+    .btn-area {
+        display: flex;
+        max-width: 440px;
+        margin: 0 auto;
+        padding: 60px 0px;
+        a {
+            display: block;
+            width: 50%;
+        }
+        .first-btn {
+            margin-right: 40px;
+        }
+        @include rwd_down(650) {
+            display: block;
+            padding: 30px 0px 40px 0px;
+            a {
+                max-width: 200px;
+                margin: 0 auto;
+                margin-bottom: 30px;
+            }
+            .first-btn {
+                margin-right: auto;
+            }
+        }
+    }
+    .title {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    .other-dsc {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 55px 0px 50px 0px;
+        .left {
+            @include layoutCustom(440, 800);
+            margin-right: 30px;
+        }
+        .right {
+            @include layoutCustom(440, 800);
+        }
+        @include rwd_down(650) {
+            display: block;
+            .left {
+                width: 100%;
+                margin-right: 0px;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+    }
+    .fb-btn-area {
+        padding: 0px;
+        width: 220px;
+        margin: 0 auto;
+        .link-btn {
+            background-color: #1976d2;
+            transition: background-color 0.5s ease;
+            min-width: 220px;
+            &:hover {
+                background-color: #176ABD;
+            }
+        }
+    }
 }
