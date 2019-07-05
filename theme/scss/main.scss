@@ -23,15 +23,12 @@ $mobile-font-size-p: 16px;
 * 動畫
 \**************/
 
-@keyframes hand {
+@keyframes show {
     0% {
-        height: 0px;
-    }
-    50% {
-        height: 50%;
+        opacity: 0;
     }
     100% {
-        height: 100%;
+        opacity: 1;
     }
 }
 
@@ -84,6 +81,40 @@ img {
         position: absolute;
         top: 0;
         left: 0;
+    }
+    .color.normal-color {
+        animation-duration: 3s;
+    }
+}
+
+.five-corner-area.an-active {
+    .color-an {
+        opacity: 0;
+    }
+    .an-1 {
+        animation: show 1s linear;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    .an-2 {
+        animation: show 1s linear;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+    .an-3 {
+        animation: show 1s linear;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    }
+    .an-4 {
+        animation: show 1s linear;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    .an-5 {
+        animation: show 1s linear;
+        animation-delay: 2.5s;
+        animation-fill-mode: forwards;
     }
 }
 
@@ -140,7 +171,8 @@ img {
 .section-banner {
     padding-top: 70px;
     .container {
-        max-width: 1440px;
+        max-width: 100%;
+        width: 100%;
         padding: 0px 0px;
     }
     .kv-bg {
@@ -149,8 +181,10 @@ img {
     .title {
         position: absolute;
         @include layoutCustom(500, 1440);
-        @include layoutPos(470, 1440, 'left');
+        @include layoutPos(450, 1440, 'left');
         @include layoutPos(150, 670, 'top');
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
         @include rwd_down(500) {
             @include layoutCustom(280, 320);
             @include layoutPos(20, 320, 'left');
@@ -436,6 +470,7 @@ img {
 \**************/
 
 .section-teacher {
+    position: relative;
     background-color: #e5f5fc;
     .section-title {
         @include rwd_down(650) {
@@ -628,4 +663,12 @@ img {
             }
         }
     }
+}
+
+#section_kv_dsc,
+#section_example,
+#section_teacher {
+    position: absolute;
+    top: -70px;
+    left: 0px;
 }

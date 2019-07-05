@@ -616,20 +616,16 @@ nav,
 /**************\
 * 動畫
 \**************/
-@-webkit-keyframes hand {
+@-webkit-keyframes show {
   0% {
-    height: 0px; }
-  50% {
-    height: 50%; }
+    opacity: 0; }
   100% {
-    height: 100%; } }
-@keyframes hand {
+    opacity: 1; } }
+@keyframes show {
   0% {
-    height: 0px; }
-  50% {
-    height: 50%; }
+    opacity: 0; }
   100% {
-    height: 100%; } }
+    opacity: 1; } }
 
 /**************\
 * 通用
@@ -672,6 +668,52 @@ img {
     position: absolute;
     top: 0;
     left: 0; }
+  .five-corner-area .color.normal-color {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s; }
+
+.five-corner-area.an-active .color-an {
+  opacity: 0; }
+
+.five-corner-area.an-active .an-1 {
+  -webkit-animation: show 1s linear;
+  animation: show 1s linear;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.five-corner-area.an-active .an-2 {
+  -webkit-animation: show 1s linear;
+  animation: show 1s linear;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.five-corner-area.an-active .an-3 {
+  -webkit-animation: show 1s linear;
+  animation: show 1s linear;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.five-corner-area.an-active .an-4 {
+  -webkit-animation: show 1s linear;
+  animation: show 1s linear;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+
+.five-corner-area.an-active .an-5 {
+  -webkit-animation: show 1s linear;
+  animation: show 1s linear;
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 .link-btn {
   position: relative;
@@ -718,7 +760,8 @@ img {
 .section-banner {
   padding-top: 70px; }
   .section-banner .container {
-    max-width: 1440px;
+    max-width: 100%;
+    width: 100%;
     padding: 0px 0px; }
   .section-banner .kv-bg .mobile {
     display: none; }
@@ -733,8 +776,12 @@ img {
   .section-banner .title {
     position: absolute;
     width: 34.72222%;
-    left: 32.63889%;
-    top: 22.38806%; }
+    left: 31.25%;
+    top: 22.38806%;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
     @media only screen and (max-width: 500px) {
       .section-banner .title {
         width: 87.5%;
@@ -990,6 +1037,7 @@ img {
 * 老師建議
 \**************/
 .section-teacher {
+  position: relative;
   background-color: #e5f5fc; }
   @media only screen and (max-width: 650px) {
     .section-teacher .section-title {
@@ -1163,3 +1211,10 @@ img {
     min-width: 220px; }
     .section-bottom .fb-btn-area .link-btn:hover {
       background-color: #176ABD; }
+
+#section_kv_dsc,
+#section_example,
+#section_teacher {
+  position: absolute;
+  top: -70px;
+  left: 0px; }
