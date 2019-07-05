@@ -58,8 +58,8 @@ img {
     padding-bottom: 30px;
     text-align: center;
     @include rwd_down(900) {
-        font-size: 38px;
-        line-height: 46px;
+        font-size: 30px;
+        line-height: 38px;
     }
 }
 
@@ -155,6 +155,10 @@ img {
     right: 30px;
     width: 60px;
     z-index: 100;
+    @include rwd_down(500) {
+        right: 10px;
+        bottom: 10px;
+    }
     a {
         display: block;
     }
@@ -177,14 +181,18 @@ img {
     }
     .kv-bg {
         @include showDiff();
+        max-height: calc(100vh - 270px);
+        overflow: hidden;
+        @include rwd_down(500) {
+            max-height: 100vh;
+        }
     }
     .title {
         position: absolute;
         @include layoutCustom(500, 1440);
         @include layoutPos(450, 1440, 'left');
         @include layoutPos(150, 670, 'top');
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
+        animation-duration: 1.5s;
         @include rwd_down(500) {
             @include layoutCustom(280, 320);
             @include layoutPos(20, 320, 'left');
@@ -271,8 +279,8 @@ img {
                 margin: 0 5px;
                 @include rwd_down(500) {
                     margin-left: 0px;
-                    font-size: 34px;
-                    line-height: 26px;
+                    font-size: 30px;
+                    line-height: 24px;
                 }
             }
         }

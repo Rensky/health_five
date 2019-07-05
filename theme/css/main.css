@@ -648,8 +648,8 @@ img {
   text-align: center; }
   @media only screen and (max-width: 900px) {
     .section-title {
-      font-size: 38px;
-      line-height: 46px; } }
+      font-size: 30px;
+      line-height: 38px; } }
 
 .section-sub-title {
   color: #0097e0;
@@ -749,6 +749,10 @@ img {
   right: 30px;
   width: 60px;
   z-index: 100; }
+  @media only screen and (max-width: 500px) {
+    .fixed-icon-area {
+      right: 10px;
+      bottom: 10px; } }
   .fixed-icon-area a {
     display: block; }
   .fixed-icon-area .icon-fb {
@@ -763,25 +767,29 @@ img {
     max-width: 100%;
     width: 100%;
     padding: 0px 0px; }
-  .section-banner .kv-bg .mobile {
-    display: none; }
+  .section-banner .kv-bg {
+    max-height: calc(100vh - 270px);
+    overflow: hidden; }
+    .section-banner .kv-bg .mobile {
+      display: none; }
+      @media only screen and (max-width: 500px) {
+        .section-banner .kv-bg .mobile {
+          display: block; } }
+    .section-banner .kv-bg .desktop {
+      display: block; }
+      @media only screen and (max-width: 500px) {
+        .section-banner .kv-bg .desktop {
+          display: none; } }
     @media only screen and (max-width: 500px) {
-      .section-banner .kv-bg .mobile {
-        display: block; } }
-  .section-banner .kv-bg .desktop {
-    display: block; }
-    @media only screen and (max-width: 500px) {
-      .section-banner .kv-bg .desktop {
-        display: none; } }
+      .section-banner .kv-bg {
+        max-height: 100vh; } }
   .section-banner .title {
     position: absolute;
     width: 34.72222%;
     left: 31.25%;
     top: 22.38806%;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite; }
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s; }
     @media only screen and (max-width: 500px) {
       .section-banner .title {
         width: 87.5%;
@@ -864,8 +872,8 @@ img {
         @media only screen and (max-width: 500px) {
           .section-people-care .block .dsc .sp-txt {
             margin-left: 0px;
-            font-size: 34px;
-            line-height: 26px; } }
+            font-size: 30px;
+            line-height: 24px; } }
   @media only screen and (max-width: 500px) {
     .section-people-care .block-reverse {
       -webkit-box-orient: vertical;
