@@ -783,6 +783,9 @@ img {
     @media only screen and (max-width: 500px) {
       .section-banner .kv-bg {
         max-height: 100vh; } }
+    @media only screen and (max-height: 376px) {
+      .section-banner .kv-bg {
+        min-height: calc(100vh - 70px); } }
   .section-banner .title {
     position: absolute;
     width: 34.72222%;
@@ -790,6 +793,10 @@ img {
     top: 22.38806%;
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s; }
+    @media only screen and (max-height: 700px) {
+      .section-banner .title {
+        width: 280px;
+        left: calc(50% - 140px); } }
     @media only screen and (max-width: 500px) {
       .section-banner .title {
         width: 87.5%;

@@ -186,6 +186,9 @@ img {
         @include rwd_down(500) {
             max-height: 100vh;
         }
+        @include rwd_height_down(376) {
+            min-height: calc(100vh - 70px);
+        }
     }
     .title {
         position: absolute;
@@ -193,6 +196,10 @@ img {
         @include layoutPos(450, 1440, 'left');
         @include layoutPos(150, 670, 'top');
         animation-duration: 1.5s;
+        @include rwd_height_down(700) {
+            width: 280px;
+            left: calc(50% - 140px);
+        }
         @include rwd_down(500) {
             @include layoutCustom(280, 320);
             @include layoutPos(20, 320, 'left');
