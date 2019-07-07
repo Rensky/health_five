@@ -183,11 +183,20 @@ img {
         @include showDiff();
         max-height: calc(100vh - 270px);
         overflow: hidden;
-        @include rwd_down(500) {
-            max-height: 100vh;
+        min-height: 80vh;
+        @include rwd_height_down(600) {
+            min-height: 70vh;
         }
         @include rwd_height_down(376) {
             min-height: calc(100vh - 70px);
+        }
+        @include rwd_down(700) {
+            max-height: 100vh;
+            min-height: 20vh;
+        }
+        @include rwd_down(500) {
+            max-height: 100vh;
+            min-height: 20vh;
         }
     }
     .title {

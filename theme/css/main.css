@@ -769,7 +769,8 @@ img {
     padding: 0px 0px; }
   .section-banner .kv-bg {
     max-height: calc(100vh - 270px);
-    overflow: hidden; }
+    overflow: hidden;
+    min-height: 80vh; }
     .section-banner .kv-bg .mobile {
       display: none; }
       @media only screen and (max-width: 500px) {
@@ -780,12 +781,20 @@ img {
       @media only screen and (max-width: 500px) {
         .section-banner .kv-bg .desktop {
           display: none; } }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-height: 600px) {
       .section-banner .kv-bg {
-        max-height: 100vh; } }
+        min-height: 70vh; } }
     @media only screen and (max-height: 376px) {
       .section-banner .kv-bg {
         min-height: calc(100vh - 70px); } }
+    @media only screen and (max-width: 700px) {
+      .section-banner .kv-bg {
+        max-height: 100vh;
+        min-height: 20vh; } }
+    @media only screen and (max-width: 500px) {
+      .section-banner .kv-bg {
+        max-height: 100vh;
+        min-height: 20vh; } }
   .section-banner .title {
     position: absolute;
     width: 34.72222%;
