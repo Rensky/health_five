@@ -183,18 +183,26 @@ img {
         @include showDiff();
         max-height: calc(100vh - 270px);
         overflow: hidden;
-        min-height: 80vh;
+        @media screen and (min-height: 700px) and (min-width: 1440px) {
+            .desktop {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
         @include rwd_height_down(600) {
             min-height: 70vh;
+            .desktop {
+                width: 60%;
+                margin: 0 auto;
+            }
         }
-        @include rwd_height_down(376) {
+        @include rwd_height_down(414) {
             min-height: calc(100vh - 70px);
+            .desktop {
+                width: 100%;
+            }
         }
-        @include rwd_down(700) {
-            max-height: 100vh;
-            min-height: 20vh;
-        }
-        @include rwd_down(500) {
+        @include rwd_down(1024) {
             max-height: 100vh;
             min-height: 20vh;
         }
@@ -206,6 +214,14 @@ img {
         @include layoutPos(150, 670, 'top');
         animation-duration: 1.5s;
         @include rwd_height_down(700) {
+            width: 400px;
+            left: calc(50% - 200px);
+        }
+        @media (min-height: 700px) and (min-width: 1440px) {
+            width: 300px;
+            left: calc(50% - 150px);
+        }
+        @include rwd_height_down(414) {
             width: 280px;
             left: calc(50% - 140px);
         }

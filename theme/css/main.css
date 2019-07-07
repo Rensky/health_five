@@ -769,8 +769,7 @@ img {
     padding: 0px 0px; }
   .section-banner .kv-bg {
     max-height: calc(100vh - 270px);
-    overflow: hidden;
-    min-height: 80vh; }
+    overflow: hidden; }
     .section-banner .kv-bg .mobile {
       display: none; }
       @media only screen and (max-width: 500px) {
@@ -781,17 +780,22 @@ img {
       @media only screen and (max-width: 500px) {
         .section-banner .kv-bg .desktop {
           display: none; } }
+    @media screen and (min-height: 700px) and (min-width: 1440px) {
+      .section-banner .kv-bg .desktop {
+        width: 70%;
+        margin: 0 auto; } }
     @media only screen and (max-height: 600px) {
       .section-banner .kv-bg {
-        min-height: 70vh; } }
-    @media only screen and (max-height: 376px) {
+        min-height: 70vh; }
+        .section-banner .kv-bg .desktop {
+          width: 60%;
+          margin: 0 auto; } }
+    @media only screen and (max-height: 414px) {
       .section-banner .kv-bg {
-        min-height: calc(100vh - 70px); } }
-    @media only screen and (max-width: 700px) {
-      .section-banner .kv-bg {
-        max-height: 100vh;
-        min-height: 20vh; } }
-    @media only screen and (max-width: 500px) {
+        min-height: calc(100vh - 70px); }
+        .section-banner .kv-bg .desktop {
+          width: 100%; } }
+    @media only screen and (max-width: 1024px) {
       .section-banner .kv-bg {
         max-height: 100vh;
         min-height: 20vh; } }
@@ -803,6 +807,14 @@ img {
     -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s; }
     @media only screen and (max-height: 700px) {
+      .section-banner .title {
+        width: 400px;
+        left: calc(50% - 200px); } }
+    @media (min-height: 700px) and (min-width: 1440px) {
+      .section-banner .title {
+        width: 300px;
+        left: calc(50% - 150px); } }
+    @media only screen and (max-height: 414px) {
       .section-banner .title {
         width: 280px;
         left: calc(50% - 140px); } }
